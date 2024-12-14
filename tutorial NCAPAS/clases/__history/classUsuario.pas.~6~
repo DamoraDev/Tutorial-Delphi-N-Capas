@@ -1,0 +1,43 @@
+unit classUsuario;
+
+interface
+uses system.SysUtils,
+     classRoles,
+     system.Classes;
+
+Type Tusuario = Class
+      Private
+      FIDusuario:string;
+      Fcontrasena:string;
+      Factivo:boolean;
+      Frol:Trol;
+      Public
+      property IdUsuario:string  read  FIDusuario  Write FIDusuario;
+      property Contrasena:String read FContrasena write Fcontrasena;
+      property Activo:boolean read Factivo write Factivo;
+      property Rol:TRol read Frol write Frol;
+      Constructor Create;
+      Destructor Destroy;Override;
+      Procedure Free;
+End;
+
+implementation
+
+Procedure Tusuario.Free;
+Begin
+  if self<>nil then Destroy;
+End;
+
+Destructor Tusuario.Destroy;
+Begin
+  Rol.Free;
+  inherited Destroy;
+End;
+Constructor Tusuario.Create;
+Begin
+  Idusuario:='';
+  Contrasena:='';
+  Activo:=true;
+  Rol.Create;
+End;
+end.

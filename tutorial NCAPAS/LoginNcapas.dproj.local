@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/12/12 18:53:49.000.549,=C:\Users\DavidMR\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/12/12 18:54:32.000.410,C:\Users\DavidMR\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\githubDelphi\tutorial NCAPAS\Forms\FormLogin.dfm</Transaction>
+    <Transaction>2024/12/12 18:54:32.000.410,C:\Users\DavidMR\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\githubDelphi\tutorial NCAPAS\Forms\FormLogin.pas</Transaction>
+    <Transaction>2024/12/12 18:54:49.000.322,C:\Users\DavidMR\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\githubDelphi\tutorial NCAPAS\LoginNcapas.dproj</Transaction>
+    <Transaction>2024/12/12 19:18:11.000.277,=C:\githubDelphi\tutorial NCAPAS\Unit1.pas</Transaction>
+    <Transaction>2024/12/12 19:19:07.000.074,C:\githubDelphi\tutorial NCAPAS\Unit1.pas=C:\githubDelphi\tutorial NCAPAS\clases\classUsuario.pas</Transaction>
+    <Transaction>2024/12/12 19:26:30.000.278,=C:\githubDelphi\tutorial NCAPAS\Unit1.pas</Transaction>
+    <Transaction>2024/12/12 19:26:43.000.981,C:\githubDelphi\tutorial NCAPAS\Unit1.pas=C:\githubDelphi\tutorial NCAPAS\clases\classRoles.pas</Transaction>
+    <Transaction>2024/12/12 19:41:12.000.051,=C:\githubDelphi\tutorial NCAPAS\Unit1.pas</Transaction>
+    <Transaction>2024/12/12 19:41:40.000.629,C:\githubDelphi\tutorial NCAPAS\Unit1.pas=C:\githubDelphi\tutorial NCAPAS\logica\logica_login.pas</Transaction>
+    <Transaction>2024/12/12 20:46:44.000.155,C:\githubDelphi\tutorial NCAPAS\clases\classRoles.pas=</Transaction>
+    <Transaction>2024/12/12 21:38:22.000.047,=C:\githubDelphi\tutorial NCAPAS\Unit1.pas</Transaction>
+    <Transaction>2024/12/12 21:39:15.000.047,C:\githubDelphi\tutorial NCAPAS\Unit1.dfm=C:\githubDelphi\tutorial NCAPAS\Forms\FormApp.dfm</Transaction>
+    <Transaction>2024/12/12 21:39:15.000.047,C:\githubDelphi\tutorial NCAPAS\Unit1.pas=C:\githubDelphi\tutorial NCAPAS\Forms\FormApp.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,14 @@
+program LoginNcapas;
+
+uses
+  Vcl.Forms,
+  FormLogin in 'Forms\FormLogin.pas' {Form_Login};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm_Login, Form_Login);
+  Application.Run;
+end.

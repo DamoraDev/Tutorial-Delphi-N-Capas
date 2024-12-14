@@ -1,0 +1,58 @@
+unit logica_login;
+
+interface
+Uses system.SysUtils,
+     vcl.Dialogs,
+     data.Win.ADODB;
+     Procedure Login(IdUsuario:string;Contrasena:string);
+Const CadenaConexion=
+     'Provider=Microsoft.Jet.OLEDB.4.0;'
+     +'Data Source=dbejemplo.mdb;';
+implementation
+uses classUsuario;
+
+// esta version 1.0 no tiene encriptacion de contraseña y unicamente trabaja con MSAccess
+Procedure Login(IdUsuario:string;Contrasena:string);
+Var cSQL:TADOQuery;
+    con:TADOConnection;
+    x:integer;
+var Usuario:Tusuario;
+    Begin
+    x:=0;
+      try
+      Usuario:=Tusuario.Create;
+      usuario.IdUsuario:=Idusuario;
+      Usuario.Contrasena:=Contrasena;
+      usuario.Activo:=false;
+      usuario.Rol:='roUsuario';
+      except
+        on e:exception do showmessage('Error :: '+e.Message);
+      end;
+      // el usuario es el que efectua el login
+      try
+        con:=TADOconnection.Create(nil);
+        con.Connected:=false;
+        con.ConnectionString:=CadenaConexion;
+        cSQL:=TADOQuery.Create(nil);
+        cSQL.Close;
+        cSQL.Connection:=con;
+        cSQL.SQL.Clear;
+        cSQL.SQL.Text:='SELECT IdUsuario,Contrasena,Activo,Rol FROM Usuarios '+
+        'WHERE IdUsuario ='+QuotedStr(usuario.IdUsuario)
+        +'AND Contrasena='+QuotedStr(usuario.Contrasena)+
+        'AND Activo=true';
+        con.Connected:=true;
+        cSQL.Open;
+        if cSQL.Eof then ShowMessage('Usuario Y/O contraseña incorrectos')
+           else
+              Begin
+                ShowMessage('Bienvenido');
+              End;
+      finally
+        cSQL.Free;
+        con.Free;
+        usuario.Free;
+      end;
+
+    End;
+end.

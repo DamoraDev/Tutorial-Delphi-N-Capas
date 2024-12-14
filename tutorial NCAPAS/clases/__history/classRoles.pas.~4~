@@ -1,0 +1,36 @@
+unit classRoles;
+
+interface
+Uses system.SysUtils,
+      system.Classes;
+Type TRol= class
+   FNombre:TstringList;
+   FDescripccion:TstringList;
+   Private
+   property Nombre:TstringList read Fnombre;
+   property Descripcion:TstringList read FDescripccion;
+   public
+   Constructor Create;
+   Destructor Destroy;Override;
+   procedure Free;
+end;
+implementation
+
+Procedure TRol.Free;
+Begin
+  if self<>nil then Destroy;
+End;
+Destructor TRol.Destroy;
+Begin
+  inherited Destroy;
+End;
+Constructor Trol.Create;
+Begin
+  Nombre[0]:='roAdmin';
+  Nombre[1]:='roUsuario';
+  Nombre[2]:='roInvitado';
+  Descripcion[0]:='Usuario Administrador';
+  Descripcion[1]:='Usuario Normal';
+  Descripcion[2]:='Usuario Invitado';
+End;
+end.
